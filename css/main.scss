@@ -57,10 +57,27 @@
     	select{
     		width: 150px;
 			height: 30px;
+			&:after{
+				content: "▼";
+  				padding: 0 8px;
+  				font-size: 12px;
+  				position: absolute;
+  				right: 8px;
+  				top: 4px;
+  				z-index: 1;
+  				text-align: center;
+  				width: 10%;
+  				height: 100%;
+  				pointer-events: none;
+  				box-sizing: border-box;
+  				background: #fff;
+			}
     	}
-    	input{
+    	input, select{
     		width: 150px;
 			height: 30px;
+			border: none;
+			border-radius: 5px;
     	}
     }
 

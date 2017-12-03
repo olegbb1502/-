@@ -60,9 +60,26 @@
   width: 150px;
   height: 30px;
 }
-.header .price input {
+.header .price select:after {
+  content: "тЦ╝";
+  padding: 0 8px;
+  font-size: 12px;
+  position: absolute;
+  right: 8px;
+  top: 4px;
+  z-index: 1;
+  text-align: center;
+  width: 10%;
+  height: 100%;
+  pointer-events: none;
+  box-sizing: border-box;
+  background: #fff;
+}
+.header .price input, .header .price select {
   width: 150px;
   height: 30px;
+  border: none;
+  border-radius: 5px;
 }
 .header #modal_form {
   width: 300px;
