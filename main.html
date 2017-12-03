@@ -3,6 +3,9 @@
 <head>
 	<meta charset="UTF-8">
 	<title>СТО</title>
+	<link rel = "stylesheet" href="css/main.css">
+	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+	<script type = "text/javascript" src="js/js.js"></script>
 </head>
 <body>
 	<div class="content-wrapper">
@@ -13,13 +16,54 @@
 				</div>
 				<nav>
 					<ul>
-						<li><a href="#head">Main Page</a></li>
+						<li><a href="main.html">Main Page</a></li>
 						<li><a href="service/index.html">Serrvice</a></li>
-						<li><a href="client/index.html">Client</a></li>
+						<li><a href="#" id="go">Client</a></li>
 					</ul>
 				</nav>
+				<div id="modal_form" style="display: none; top: 45%; opacity: 0;">
+					<span id="modal_close">X</span>
+						<form action="index.php" method="post">
+							<h3>Простое модальное окно</h3>
+							<p>Тут может быть рандомная обычная форма например.</p>
+							<p>Ваше имя<br>
+								<input type="text" name="your-name" value="" size="40">
+							</p>
+							<p>Ваш телефон<br>
+								<input type="text" name="your-name" value="" size="40">
+							</p>
+							<p style="text-align: center; padding-bottom: 10px;">
+				<input type="submit" value="Отправить">
+							</p>
+						</form>
+				</div>
+				<div id="overlay" style="display: none;"></div>
 			</div>
-
+			<h1 id="main">Ремонт и диагностика вашей машини без очередей</h1>
+			<form action="index.php" method="post">
+				<div class="price">
+					<select name="car" id="car" placeholder="Марка машины">
+						<option disabled>Марка машины</option>
+						<option>Toyota</option>
+						<option>Renault</option>
+						<option>VAZ</option>
+					</select>
+					<select name="model" id="model" placeholder="Модель">
+						<option disabled>Модель</option>
+						<option>Corolla</option>
+						<option>Megan</option>
+						<option>2106</option>
+					</select>
+					<select name="service" id="service" placeholder="ВЫберите услугу">
+						<option disabled>ВЫберите услугу</option>
+						<option>engine</option>
+						<option>hodova</option>
+						<option>painting</option>
+					</select>
+					<input type="submit" value="Отправить">
+					<div id="nextprice"></div>
+				</div>
+			</form>
 		</div>
 	</div>
 </body>
