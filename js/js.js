@@ -21,3 +21,15 @@ $(document).ready(function() { // вся магия после загрузки 
   });
 });
 
+function admin() {
+   var name = $('#name').val();
+    console.log(name);
+    var phone = $('#phone').val();
+    console.log(phone);
+    if(name=='Administration' && phone=='adminPhone'){
+      location.href = 'admin/index.html';
+    }
+    else{
+    location.href = '../myLogin.php';}
+ }
+

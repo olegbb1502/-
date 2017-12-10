@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<meta http-equiv="Cache-Control" content="max-age=3600, must-revalidate">
 	<title>СТО</title>
 	<link rel = "stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
 	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
 	<script type = "text/javascript" src="js/js.js"></script>
 </head>
@@ -19,30 +19,22 @@
 					<ul>
 						<li><a href="main.html">Main Page</a></li>
 						<li><a href="service/index.html">Serrvice</a></li>
-						<li><a href="#" id="go">Client</a></li>
+						<li><a href="#" id="go"><i class="fa fa-user-circle" aria-hidden="true"></i></a></li>
 					</ul>
 				</nav>
 				<div id="modal_form" style="display: none; top: 45%; opacity: 0;">
 					<span id="modal_close">X</span>
-						<form action="index.php" method="post">
-							<h3>Простое модальное окно</h3>
-							<p>Тут может быть рандомная обычная форма например.</p>
-							<p>Ваше имя<br>
-								<input type="text" name="your-name" value="" size="40">
-							</p>
-							<p>Ваш телефон<br>
-								<input type="text" name="your-name" value="" size="40">
-							</p>
-							<p style="text-align: center; padding-bottom: 10px;">
-				<input type="submit" value="Отправить">
-							</p>
+						<form method="POST">
+							Логин <input name="login" type="text" id="name"><br>
+							Пароль <input name="password" type="password" id="phone"><br>
+							<input type="button" value="Войти" onclick="admin()">
 						</form>
 				</div>
 				<div id="overlay" style="display: none;"></div>
 			</div>
 			<h1 id="main">Ремонт и диагностика вашей машини без очередей</h1>
-			<form method="post" id="formx" action="javascript:void(null);" onsubmit="call()">
-				<!-- <div class="price"> -->
+			<form method="post" action="index.php">
+				<div class="price">
 					<select name="car" id="car" placeholder="Марка машины">
 						<option disabled>Марка машины</option>
 						<option>Toyota</option>
@@ -61,9 +53,9 @@
 						<option>hodova</option>
 						<option>painting</option>
 					</select>
-					<input value="Send" type="submit">
-					<input name="idm" type="hidden" value="<?=$price[0]?>">
-				<!-- </div> -->
+					<input type="submit" value="Отправить">
+					<div id="chekPrice">Price:<?=$price[0]?></div>
+				</div>
 			</form>
 		</div>
 	</div>
