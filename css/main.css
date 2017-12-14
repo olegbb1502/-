@@ -1,7 +1,17 @@
 @charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Noto+Serif");
 * {
   margin: 0 auto;
   padding: 0;
+  font-family: "Noto Serif", serif;
+}
+
+a {
+  text-decoration: none;
+  font-family: "Noto Serif", serif;
+}
+a {
+  color: #fff;
 }
 
 .header {
@@ -15,6 +25,7 @@
 .header .menu {
   display: flex;
   justify-content: flex-start;
+  background: rgba(0, 0, 0, 0.7);
 }
 .header .menu .logo {
   display: block;
@@ -75,12 +86,6 @@
   box-sizing: border-box;
   background: #fff;
 }
-.header .price input, .header .price select {
-  width: 150px;
-  height: 30px;
-  border: none;
-  border-radius: 5px;
-}
 .header #modal_form {
   width: 300px;
   height: 300px;
@@ -136,6 +141,167 @@
   cursor: pointer;
   display: none;
   /* ╨▓ o╨▒╤Л╤З╨╜o╨╝ ╤Бo╤Б╤Вo╤П╨╜╨╕╨╕ ╨╡╤С ╨╜╨╡╤В) */
+}
+
+#chekPrice {
+  /*display: none;*/
+  text-align: center;
+  font-size: 28px;
+  margin: 20px auto;
+  display: block;
+  background: #38a6c4;
+  width: 190px;
+  height: 30px;
+  padding: 15px 20px;
+}
+
+.head {
+  display: block;
+  height: 100vh;
+  width: 100vw;
+  background: #c9c9c9;
+}
+.head .registrat {
+  display: flex;
+  justify-content: flex-start;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 5px 25px;
+}
+.head .registrat .logo {
+  display: block;
+  background: url(../images/logo.png);
+  background-repeat: no-repeat;
+  background-size: 40px 40px;
+  width: 90px;
+  height: 40px;
+  text-align: left;
+  padding-left: 45px;
+  margin-left: 15%;
+  float: center;
+  font-size: 8px;
+  margin-top: 10px;
+  /*position: fixed;*/
+  color: #fff;
+}
+.head .registrat ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  /*position: fixed;*/
+}
+.head .registrat ul li {
+  margin: 10px 15px;
+}
+.head .registrat ul li a {
+  color: #fff;
+  font-size: 25px;
+  text-decoration: none;
+}
+.head #registration {
+  text-align: center;
+  margin-top: 25px;
+}
+.head #registration input, .head #registration select, .head #registration button {
+  width: 150px;
+  height: 30px;
+  border: none;
+  border-radius: 5px;
+  margin: 5px auto;
+  padding: 5px 20px;
+}
+.head #registration select {
+  width: 190px;
+  height: 40px;
+}
+
+.welcome {
+  width: 98vw;
+  height: 100vh;
+}
+.welcome a {
+  color: #000;
+}
+.welcome .registrat {
+  /*		display: flex;
+  		justify-content: flex-end;*/
+  margin-top: 10px;
+}
+.welcome .registrat ul {
+  display: flex;
+  justify-content: flex-end;
+  list-style: none;
+  /*position: fixed;*/
+}
+.welcome .registrat ul li {
+  margin: 10px 15px;
+}
+.welcome .registrat ul li a {
+  color: #000;
+  font-size: 25px;
+  text-decoration: none;
+}
+.welcome .registrat ul li #SO:hover {
+  color: #fff;
+  background: #f42929;
+  padding: 5px 10px;
+}
+.welcome h1 {
+  margin: 20px 10%;
+  width: 70vw;
+}
+.welcome #car {
+  font-size: 20px;
+  margin: 15px 10%;
+}
+.welcome #list {
+  text-align: left;
+  margin: 20px 10%;
+  display: block;
+  background: #c9c9c9;
+  width: 20vw;
+  padding: 10px 20px;
+}
+.welcome #list h3 {
+  margin: 0;
+  width: 40px;
+}
+.welcome #list ol {
+  margin: 10px;
+}
+.welcome .func {
+  display: flex;
+  justify-content: center;
+  width: 25vw;
+  margin-left: 118px;
+  color: #fff;
+}
+.welcome .func #func1 {
+  font-family: "Noto Serif", serif;
+  display: block;
+  background: #28f44e;
+  padding: 5px;
+}
+.welcome .func #func1 i {
+  color: #fff;
+  /*margin-right: 2px;*/
+}
+.welcome .func #func1 input {
+  padding: 3px;
+  width: 10vw;
+}
+.welcome .func #func2 {
+  font-family: "Noto Serif", serif;
+  display: block;
+  background: #f42929;
+  padding: 10px;
+}
+.welcome .func #func2 i {
+  color: #fff;
+  /*margin-right: 2px;*/
+}
+.welcome #bonus {
+  margin-left: 10%;
+  margin-top: 20px;
 }
 
 /*# sourceMappingURL=main.css.map */

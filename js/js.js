@@ -54,7 +54,7 @@ $(document).ready(function() { // вся магия после загрузки 
     });
   });
   /* Закрытие модального окна, тут делаем то же самое но в обратном порядке */
-  $('#modal_dell_close, #dell_overlay').click( function(){ // ловим клик по крестику или подложке
+  $('#modal_dell, #dell_overlay').click( function(){ // ловим клик по крестику или подложке
     $('#modal_dell_form')
       .animate({opacity: 0, top: '45%'}, 200,  // плавно меняем прозрачность на 0 и одновременно двигаем окно вверх
         function(){ // после анимации
@@ -64,6 +64,9 @@ $(document).ready(function() { // вся магия после загрузки 
       );
   });
 });
+
+
+  
 
 function admin() {
    var name = $('#name').val();
@@ -77,3 +80,12 @@ function admin() {
       location.href = '../.include/welcome.php';
     }
  }
+
+function show(id){
+  var el=document.getElementById(id);
+  if(el.style.display=="block"){
+    el.style.display="none";
+  } else {
+    el.style.display="block";
+  }
+}

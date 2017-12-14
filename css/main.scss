@@ -1,6 +1,19 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif');
+$fonts: 'Noto Serif', serif;
+
 *{
 	margin: 0 auto;
 	padding: 0;
+	font-family: $fonts;
+}
+
+a{
+	text-decoration: none;
+	font-family: $fonts;
+	&{
+		color: #fff;
+	}
+
 }
 
 .header{
@@ -13,6 +26,7 @@
     .menu{
 		display: flex;
 		justify-content: flex-start;
+		background: rgba(0,0,0,.7);
 		.logo{
 			display: block;
 			background: url(../images/logo.png);
@@ -73,12 +87,8 @@
   				background: #fff;
 			}
     	}
-    	input, select{
-    		width: 150px;
-			height: 30px;
-			border: none;
-			border-radius: 5px;
-    	}
+    	
+
     }
 
     #modal_form{
@@ -123,4 +133,175 @@
 		cursor:pointer;
 		display:none; /* в oбычнoм сoстoянии её нет) */
     }
+
+
+}
+
+    #chekPrice{
+    		/*display: none;*/
+    		text-align: center;
+			font-size: 28px;
+			margin: 20px auto;
+			display: block;
+			background: #38a6c4;
+			width: 190px;
+			height: 30px;
+			padding: 15px 20px;
+    	}
+
+.head{
+	display: block;
+	height: 100vh;
+	width: 100vw;
+	background: #c9c9c9;
+	.registrat{
+		display: flex;
+		justify-content: flex-start;
+		background: rgba(0,0,0,.7);
+		padding:5px 25px;
+		.logo{
+			display: block;
+			background: url(../images/logo.png);
+			background-repeat: no-repeat;
+			background-size: 40px 40px;
+			width: 90px;
+			height: 40px;
+			text-align: left;
+			padding-left: 45px;
+			margin-left: 15%;
+			float: center; 
+			font-size: 8px;
+			margin-top: 10px;
+			/*position: fixed;*/
+			color: #fff;
+		}
+		ul{
+			display: flex;
+			justify-content: center;
+			list-style:none;
+			/*position: fixed;*/
+			li{
+				margin: 10px 15px;
+				a{
+					color: #fff;
+					font-size: 25px;
+					text-decoration: none;
+					
+				}
+			}
+		}
+	}
+
+	#registration{
+		text-align: center;
+		margin-top: 25px;
+		input, select, button{
+    		width: 150px;
+			height: 30px;
+			border: none;
+			border-radius: 5px;
+			margin: 5px auto;
+			padding: 5px 20px;
+    	}
+    	select{
+    		width: 190px;
+			height: 40px;
+    	}
+	}
+}   
+
+.welcome{
+	width: 98vw;
+	height: 100vh;
+	a{
+		color: #000;
+	}
+	.registrat{
+	/*		display: flex;
+			justify-content: flex-end;*/
+		margin-top: 10px;
+		ul{
+			display: flex;
+			justify-content: flex-end;
+			list-style:none;
+			/*position: fixed;*/
+			li{
+				margin: 10px 15px;
+				a{
+					color: #000;
+					font-size: 25px;
+					text-decoration: none;
+					
+				}
+				#SO:hover{
+					color: #fff;
+					background: #f42929;
+					padding: 5px 10px;
+				}
+			}
+		}
+	}
+	h1{
+		margin: 20px 10%;
+		width: 70vw;
+	}
+	#car{
+		font-size: 20px;
+		margin: 15px 10%;
+	}
+	#list{
+		text-align: left;
+		margin: 20px 10%;
+		display: block;
+		background: #c9c9c9;
+		width: 20vw;
+		padding: 10px 20px;
+		h3{
+			margin:0;
+			width: 40px;
+		}
+		ol{
+			margin: 10px;
+		}
+
+	}
+
+	.func{
+		display: flex;
+		justify-content: center;
+		width: 25vw;
+		margin-left: 118px;
+		color: #fff;
+		#func1{
+			font-family: $fonts;
+			display: block;
+			background: #28f44e;
+			padding: 5px;
+			i{
+				color: #fff;
+				/*margin-right: 2px;*/
+			}
+			input{
+				padding: 3px;
+				width: 10vw;
+			}
+
+		}
+		#func2{
+			font-family: $fonts;
+			display: block;
+			background: #f42929;
+			padding: 10px;
+			i{
+				color: #fff;
+				/*margin-right: 2px;*/
+			}
+
+		}
+	}
+
+	#bonus{
+		margin-left:10%;
+		margin-top: 20px;
+	}
 }
