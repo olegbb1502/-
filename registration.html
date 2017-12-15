@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>REGISTRATION</title>
+	<meta charset="UTF-8">
+	<link rel = "stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<script defer src="js/script.js"></script>
+	<script defer src="js/calendar.js"></script>
+</head>
+<body>
+	<div class="head">
+		<div class="registrat">
+				<div class="logo">
+					<h1>Car mechanic</h1>
+				</div>
+				<nav>
+					<ul>
+						<li><a href="main.html">Main Page</a></li>
+						<li><a href="service/index.html">Serrvice</a></li>
+						<li><a href="include/login.php"><i class="fa fa-user-circle" aria-hidden="true"></i></a></li>
+					</ul>
+				</nav>
+			</div>
+		<div id="registration">
+			<div id="name">
+				<form>
+					<input type="text" placeholder="Имя" onfocus="this.select();">
+				</form>
+			</div>
+			<div id="surname">
+				<form>
+					<input type="text" placeholder="Фамилия" onfocus="this.select();">
+				</form>
+			</div>
+			<div id="date">
+
+				<form >
+					<input type="text" id="date_input" placeholder="Дата" onfocus="this.select();" onclick="event.cancelBubble=true;this.select();lcs(this)">
+				</form>
+			</div>
+			<div id="type">
+				<select type="text" id = "vehicle_type">
+					<option>Машина</option>
+				</select>
+			</div>
+			<div id="service">
+				<select type="text" id = "service_list">
+					<option>Услуга</option>
+				</select>
+
+			</div>
+			<div id="mob_phone">
+				<form>
+					<input type="text" placeholder="Мобильный телефон" onfocus="this.select();">
+				</form>
+			</div>
+			<div id="email">
+				<form>
+					<input type="text" placeholder="Веддите ваш e-mail" onfocus="this.select();">
+					<input type="text" placeholder="Проверка e-mail" onfocus="this.select();">
+				</form>
+			</div>
+			<div id = "reg">
+				<button id = "reg_button">Регистрация</button>
+			</div>
+		</div>
+	<script>
+		document.write('<table id="fc" style="position:absolute;border-collapse:collapse;background:#FFFFFF;border:1px solid #FFD088;display:none;-moz-user-select:none;-khtml-user-select:none;user-select:none;" cellpadding="2">');
+		document.write('<tr style="font:bold 13px Arial" onselectstart="return false"><td style="cursor:pointer;font-size:15px" onclick="upmonth(-1)">&laquo;</td><td colspan="5" id="mns" align="center"></td><td align="right" style="cursor:pointer;font-size:15px" onclick="upmonth(1)">&raquo;</td></tr>');
+		document.write('<tr style="background:#FF9900;font:12px Arial;color:#FFFFFF"><td align=center>П</td><td align=center>В</td><td align=center>С</td><td align=center>Ч</td><td align=center>П</td><td align=center>С</td><td align=center>В</td></tr>');
+	for(var kk=1;kk<=6;kk++) {
+		document.write('<tr>');
+			for(var tt=1;tt<=7;tt++) {
+				num=7 * (kk-1) - (-tt);
+				document.write('<td id="cv' + num + '" style="width:18px;height:18px">&nbsp;</td>');
+			}
+	document.write('</tr>');
+	}
+	document.write('<tr><td colspan="7" align="center" style="cursor:pointer;font:13px Arial;background:#FFC266" onclick="today()">Сегодня: '+addnull(sccd,sccm+1,sccy)+'</td></tr>');
+	document.write('</table>');
+</script>
+</div>
+</body>
+
+

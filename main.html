@@ -3,6 +3,10 @@
 <head>
 	<meta charset="UTF-8">
 	<title>СТО</title>
+	<link rel = "stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+	<script type = "text/javascript" src="js/js.js"></script>
 </head>
 <body>
 	<div class="content-wrapper">
@@ -13,13 +17,49 @@
 				</div>
 				<nav>
 					<ul>
-						<li><a href="#head">Main Page</a></li>
+						<li><a href="main.html">Main Page</a></li>
 						<li><a href="service/index.html">Serrvice</a></li>
-						<li><a href="client/index.html">Client</a></li>
+						<li><a href="include/login.php"><i class="fa fa-user-circle" aria-hidden="true"></i></a></li>
 					</ul>
 				</nav>
+<!-- 				<div id="modal_form" style="display: none; top: 45%; opacity: 0;">
+					<span id="modal_close">X</span>
+						<form method="POST">
+							Логин <input name="login" type="text" id="name"><br>
+							Пароль <input name="password" type="password" id="phone"><br>
+							<input type="button" value="Войти" onclick="admin()">
+						</form>
+				</div>
+				<div id="overlay" style="display: none;"></div> -->
 			</div>
+			<h1 id="main">Ремонт и диагностика вашей машини без очередей</h1>
+<!-- 			<form method="post" action="index.php">
+				<div class="price">
+					<select name="car" id="car" placeholder="Марка машины">
+						<option disabled>Марка машины</option>
+						<option>Toyota</option>
+						<option>Renault</option>
+						<option>VAZ</option>
+					</select>
+					<select name="model" id="model" placeholder="Модель">
+						<option disabled>Модель</option>
+						<option>Corolla</option>
+						<option>Megan</option>
+						<option>2106</option>
+					</select>
+					<select name="service" id="service" placeholder="ВЫберите услугу">
+						<option disabled>ВЫберите услугу</option>
+						<option>engine</option>
+						<option>hodova</option>
+						<option>painting</option>
+					</select>
+					<input type="submit" value="Отправить" onclick="show('chekPrice')">
 
+				</div>
+			</form> -->
+			<div id="chekPrice">
+				<a href="registration.html">Регистрация</a>	
+			</div>
 		</div>
 	</div>
 </body>

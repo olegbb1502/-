@@ -1,0 +1,307 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Noto+Serif");
+* {
+  margin: 0 auto;
+  padding: 0;
+  font-family: "Noto Serif", serif;
+}
+
+a {
+  text-decoration: none;
+  font-family: "Noto Serif", serif;
+}
+a {
+  color: #fff;
+}
+
+.header {
+  height: 100vh;
+  background: url(../images/header.jpg);
+  /*-webkit-filter: grayscale(.4);  */
+  background-size: 100vw 100vh;
+  background-repeat: no-repeat;
+  color: #fff;
+}
+.header .menu {
+  display: flex;
+  justify-content: flex-start;
+  background: rgba(0, 0, 0, 0.7);
+}
+.header .menu .logo {
+  display: block;
+  background: url(../images/logo.png);
+  background-repeat: no-repeat;
+  background-size: 70px 70px;
+  width: 80px;
+  height: 80px;
+  text-align: left;
+  padding-left: 75px;
+  margin-left: 15%;
+  float: center;
+  font-size: 14px;
+  margin-top: 10px;
+  position: fixed;
+}
+.header .menu ul {
+  display: inline-flex;
+  justify-content: center;
+  list-style: none;
+  position: fixed;
+}
+.header .menu ul li {
+  margin: 10px 15px;
+}
+.header .menu ul li a {
+  color: #fff;
+  font-size: 25px;
+  text-decoration: none;
+}
+.header .menu ul li a:hover {
+  font-size: 30px;
+}
+.header #main {
+  margin-top: 50vh;
+  text-align: center;
+}
+.header .price {
+  text-align: center;
+  margin-top: 10px;
+}
+.header .price select {
+  width: 150px;
+  height: 30px;
+}
+.header .price select:after {
+  content: "тЦ╝";
+  padding: 0 8px;
+  font-size: 12px;
+  position: absolute;
+  right: 8px;
+  top: 4px;
+  z-index: 1;
+  text-align: center;
+  width: 10%;
+  height: 100%;
+  pointer-events: none;
+  box-sizing: border-box;
+  background: #fff;
+}
+.header #modal_form {
+  width: 300px;
+  height: 300px;
+  /* ╨аa╨╖╨╝╨╡╤А╤Л ╨┤o╨╗╨╢╨╜╤Л ╨▒╤Л╤В╤М ╤Д╨╕╨║╤Б╨╕╤Аo╨▓a╨╜╤Л */
+  border-radius: 5px;
+  border: 3px #000 solid;
+  background: #fff;
+  position: fixed;
+  /* ╤З╤Вo╨▒╤Л o╨║╨╜o ╨▒╤Л╨╗o ╨▓ ╨▓╨╕╨┤╨╕╨╝o╨╣ ╨╖o╨╜╨╡ ╨▓ ╨╗╤О╨▒o╨╝ ╨╝╨╡╤Б╤В╨╡ */
+  top: 45%;
+  /* o╤В╤Б╤В╤Г╨┐a╨╡╨╝ ╤Б╨▓╨╡╤А╤Е╤Г 45%, o╤Б╤Вa╨╗╤М╨╜╤Л╨╡ 5% ╨┐o╨┤╨▓╨╕╨╜╨╡╤В ╤Б╨║╤А╨╕╨┐╤В */
+  left: 50%;
+  /* ╨┐o╨╗o╨▓╨╕╨╜a ╤Н╨║╤Аa╨╜a ╤Б╨╗╨╡╨▓a */
+  margin-top: -150px;
+  margin-left: -150px;
+  /* ╤В╤Г╤В ╨▓╤Б╤П ╨╝a╨│╨╕╤П ╤Ж╨╡╨╜╤В╤Аo╨▓╨║╨╕ css, o╤В╤Б╤В╤Г╨┐a╨╡╨╝ ╨▓╨╗╨╡╨▓o ╨╕ ╨▓╨▓╨╡╤А╤Е ╨╝╨╕╨╜╤Г╤Б ╨┐o╨╗o╨▓╨╕╨╜╤Г ╤И╨╕╤А╨╕╨╜╤Л ╨╕ ╨▓╤Л╤Бo╤В╤Л ╤Бoo╤В╨▓╨╡╤В╤Б╤В╨▓╨╡╨╜╨╜o =) */
+  display: none;
+  /* ╨▓ o╨▒╤Л╤З╨╜o╨╝ ╤Бo╤Б╤Вo╤П╨╜╨╕╨╕ o╨║╨╜a ╨╜╨╡ ╨┤o╨╗╨╢╨╜o ╨▒╤Л╤В╤М */
+  opacity: 0;
+  /* ╨┐o╨╗╨╜o╤Б╤В╤М╤О ╨┐╤Аo╨╖╤Аa╤З╨╜o ╨┤╨╗╤П a╨╜╨╕╨╝╨╕╤Аo╨▓a╨╜╨╕╤П */
+  z-index: 5;
+  /* o╨║╨╜o ╨┤o╨╗╨╢╨╜o ╨▒╤Л╤В╤М ╨╜a╨╕╨▒o╨╗╨╡╨╡ ╨▒o╨╗╤М╤И╨╡╨╝ ╤Б╨╗o╨╡ */
+  padding: 20px 10px;
+  color: #000;
+}
+.header #modal_close {
+  width: 21px;
+  height: 21px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  display: block;
+}
+.header #overlay {
+  z-index: 3;
+  /* ╨┐o╨┤╨╗o╨╢╨║a ╨┤o╨╗╨╢╨╜a ╨▒╤Л╤В╤М ╨▓╤Л╤И╨╡ ╤Б╨╗o╨╡╨▓ ╤Н╨╗╨╡╨╝╨╡╨╜╤Вo╨▓ ╤Бa╨╣╤Вa, ╨╜o ╨╜╨╕╨╢╨╡ ╤Б╨╗o╤П ╨╝o╨┤a╨╗╤М╨╜o╨│o o╨║╨╜a */
+  position: fixed;
+  /* ╨▓╤Б╨╡╨│╨┤a ╨┐╨╡╤А╨╡╨║╤А╤Л╨▓a╨╡╤В ╨▓╨╡╤Б╤М ╤Бa╨╣╤В */
+  background-color: #000;
+  /* ╤З╨╡╤А╨╜a╤П */
+  opacity: 0.8;
+  /* ╨╜o ╨╜╨╡╨╝╨╜o╨│o ╨┐╤Аo╨╖╤Аa╤З╨╜a */
+  -moz-opacity: 0.8;
+  /* ╤Д╨╕╨║╤Б ╨┐╤А╨╛╨╖╤А╨░╤З╨╜╨╛╤Б╤В╨╕ ╨┤╨╗╤П ╤Б╤В╨░╤А╤Л╤Е ╨▒╤А╨░╤Г╨╖╨╡╤А╨╛╨▓ */
+  filter: alpha(opacity=80);
+  width: 100%;
+  height: 100%;
+  /* ╤Аa╨╖╨╝╨╡╤Аo╨╝ ╨▓o ╨▓╨╡╤Б╤М ╤Н╨║╤Аa╨╜ */
+  top: 0;
+  /* ╤Б╨▓╨╡╤А╤Е╤Г ╨╕ ╤Б╨╗╨╡╨▓a 0, o╨▒╤П╨╖a╤В╨╡╨╗╤М╨╜╤Л╨╡ ╤Б╨▓o╨╣╤Б╤В╨▓a! */
+  left: 0;
+  cursor: pointer;
+  display: none;
+  /* ╨▓ o╨▒╤Л╤З╨╜o╨╝ ╤Бo╤Б╤Вo╤П╨╜╨╕╨╕ ╨╡╤С ╨╜╨╡╤В) */
+}
+
+#chekPrice {
+  /*display: none;*/
+  text-align: center;
+  font-size: 28px;
+  margin: 20px auto;
+  display: block;
+  background: #38a6c4;
+  width: 190px;
+  height: 30px;
+  padding: 15px 20px;
+}
+
+.head {
+  display: block;
+  height: 100vh;
+  width: 100vw;
+  background: #c9c9c9;
+}
+.head .registrat {
+  display: flex;
+  justify-content: flex-start;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 5px 25px;
+}
+.head .registrat .logo {
+  display: block;
+  background: url(../images/logo.png);
+  background-repeat: no-repeat;
+  background-size: 40px 40px;
+  width: 90px;
+  height: 40px;
+  text-align: left;
+  padding-left: 45px;
+  margin-left: 15%;
+  float: center;
+  font-size: 8px;
+  margin-top: 10px;
+  /*position: fixed;*/
+  color: #fff;
+}
+.head .registrat ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  /*position: fixed;*/
+}
+.head .registrat ul li {
+  margin: 10px 15px;
+}
+.head .registrat ul li a {
+  color: #fff;
+  font-size: 25px;
+  text-decoration: none;
+}
+.head #registration {
+  text-align: center;
+  margin-top: 25px;
+}
+.head #registration input, .head #registration select, .head #registration button {
+  width: 150px;
+  height: 30px;
+  border: none;
+  border-radius: 5px;
+  margin: 5px auto;
+  padding: 5px 20px;
+}
+.head #registration select {
+  width: 190px;
+  height: 40px;
+}
+
+.welcome {
+  width: 98vw;
+  height: 100vh;
+}
+.welcome a {
+  color: #000;
+}
+.welcome .registrat {
+  /*		display: flex;
+  		justify-content: flex-end;*/
+  margin-top: 10px;
+}
+.welcome .registrat ul {
+  display: flex;
+  justify-content: flex-end;
+  list-style: none;
+  /*position: fixed;*/
+}
+.welcome .registrat ul li {
+  margin: 10px 15px;
+}
+.welcome .registrat ul li a {
+  color: #000;
+  font-size: 25px;
+  text-decoration: none;
+}
+.welcome .registrat ul li #SO:hover {
+  color: #fff;
+  background: #f42929;
+  padding: 5px 10px;
+}
+.welcome h1 {
+  margin: 20px 10%;
+  width: 70vw;
+}
+.welcome #car {
+  font-size: 20px;
+  margin: 15px 10%;
+}
+.welcome #list {
+  text-align: left;
+  margin: 20px 10%;
+  display: block;
+  background: #c9c9c9;
+  width: 20vw;
+  padding: 10px 20px;
+}
+.welcome #list h3 {
+  margin: 0;
+  width: 40px;
+}
+.welcome #list ol {
+  margin: 10px;
+}
+.welcome .func {
+  display: flex;
+  justify-content: center;
+  width: 25vw;
+  margin-left: 118px;
+  color: #fff;
+}
+.welcome .func #func1 {
+  font-family: "Noto Serif", serif;
+  display: block;
+  background: #28f44e;
+  padding: 5px;
+}
+.welcome .func #func1 i {
+  color: #fff;
+  /*margin-right: 2px;*/
+}
+.welcome .func #func1 input {
+  padding: 3px;
+  width: 10vw;
+}
+.welcome .func #func2 {
+  font-family: "Noto Serif", serif;
+  display: block;
+  background: #f42929;
+  padding: 10px;
+}
+.welcome .func #func2 i {
+  color: #fff;
+  /*margin-right: 2px;*/
+}
+.welcome #bonus {
+  margin-left: 10%;
+  margin-top: 20px;
+}
+
+/*# sourceMappingURL=main.css.map */
